@@ -1,14 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import Apropos from "./components/A_propos"
+import Card from "./components/Card";
+import CardsList from "./components/CardsList"
+import Footer from "./components/Footer"
+import Home from "./components/Home"
+import Header from "./components/Header"
+import PageNotFound from "./components/PageNotFound";
+
+
 import { Routes, Route } from "react-router-dom";
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        This is my Project 11 react App
-      </header>
-    </div>
+    <Header/>
+
+    <Routes>
+          <Route path="about" element={<Apropos/>} />
+          <Route path="cardslist" element={<CardsList/>}>
+          <Route path=":Id" element={<Card/>} />
+          </Route>
+          <Route path="/" element={<Home/>} />
+          <Route path="*" element={<PageNotFound/>} />
+    </Routes>
+
+    <Footer/>
+
+    </div >
   );
 }
 
