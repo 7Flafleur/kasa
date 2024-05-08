@@ -9,3 +9,58 @@
     height: 340px;
 }
 
+// @mixin montserrat-font($uniquifier, $weight) {
+//   .montserrat-#{$uniquifier} {
+//     font-family: "Montserrat", sans-serif;
+//     font-optical-sizing: auto;
+//     font-weight: $weight;
+//     font-style: normal;
+//   }
+// }
+
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+@mixin _404-font {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 288px;
+
+}
+
+@mixin regular-font{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  
+}
+
+
+@mixin medium-font{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  
+}
+
+@mixin drop-shadow {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+@mixin picture-background-accueil-d{
+  border-radius: 25px;
+opacity: 0.6;
+background: #000;
+mix-blend-mode: darken;
+}
+
+@mixin picture-background-accueil-m{
+  border-radius: 10px;
+border: 1px solid #000;
+opacity: 0.6;
+background: #000;
+mix-blend-mode: darken;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
