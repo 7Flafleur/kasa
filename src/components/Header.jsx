@@ -1,8 +1,26 @@
 import { Link, NavLink } from "react-router-dom";
+import Logo from "../assets/LOGO.png"
 
-export default function Heder() {
+export default function Header() {
+
+
     return(
-        <div>This is my header</div>
+       
+            <header className="header">
+                <img src={Logo} alt="" />
+                This is the header
+                <nav className="header_nav">
+                    <NavLink to="/">
+                        Accueil
+                    </NavLink>
+                    <NavLink to="/about">
+                        A propos
+                    </NavLink>
+                </nav>
+
+            </header>
+       
     )
     
 }
+

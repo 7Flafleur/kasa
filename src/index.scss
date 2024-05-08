@@ -1,6 +1,66 @@
 @import './styles/_variables.scss';
 @import './styles/mixins';
 
+* {
+    box-sizing: border-box;
+  }
+
+  body {  border: solid orange 1px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  #root {
+  border: solid yellow 3px;
+    display: flex; // Change this
+    flex-direction: column;
+    align-items: center; // Add this to center vertically
+    justify-content: center; // Add this to center horizontally
+    gap: 50px;
+    width: 100vw;
+    max-width: 1440px; // Set max-width to 1440px
+    max-height: $desktop-height;
+    margin-left: auto; // Center the element
+    margin-right: auto; // Center the element
+  }
+
+
+  .header{
+    border: solid red 1px;
+    width: $body-width-d;
+    display: flex;
+    justify-content: space-between ;
+  }
+
+
+.header_nav{
+    border: solid blue 1px;
+    width:$nav-width-d/$desktop-width *100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+.footer{
+    
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
