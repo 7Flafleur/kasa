@@ -5,7 +5,7 @@
 
 export default function Home () {
     return(
-        <div>This is the Home page</div>
+        <div className="home">This is the Home page</div>
     )
     
 }
