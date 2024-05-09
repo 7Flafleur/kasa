@@ -10,6 +10,8 @@
     padding: 0;
     width: 100%;
     height: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
   }
 
 
@@ -31,6 +33,7 @@
   .header{
     border: solid red 1px;
     width: $body-width-d;
+    height: $header-height-d/$desktop-height *100%;
     display: flex;
     justify-content: space-between ;
   }
@@ -41,6 +44,8 @@
     width:$nav-width-d/$desktop-width *100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    
 }
 
 

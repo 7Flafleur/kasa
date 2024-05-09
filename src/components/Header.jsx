@@ -8,7 +8,7 @@ export default function Header() {
        
             <header className="header">
                 <img src={Logo} alt="" />
-                This is the header
+                
                 <nav className="header_nav">
                     <NavLink to="/">
                         Accueil
