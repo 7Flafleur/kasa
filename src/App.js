@@ -7,16 +7,22 @@ import Header from "./components/Header"
 import PageNotFound from "./components/PageNotFound";
 
 
+
 import {  Routes, Route } from "react-router-dom";
+import Banner from "./components/Banner";
+import img1 from "./assets/Image source 1.png"
 
 
 
 function App() {
   return (
     <div className="App">
+
+      
     <Header/>
 
     <Routes>
+          <Route path="banner" element={<Banner img={img1}/>}/>
           <Route path="about" element={<Apropos/>} />
           <Route path="cardslist" element={<CardsList/>}>
           <Route path=":Id" element={<Card/>} />

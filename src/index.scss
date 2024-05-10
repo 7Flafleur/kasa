@@ -13,17 +13,19 @@
     max-height: $desktop-height;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
+    overflow-x: hidden;
+   
   }
 
 
   #root {
   border: solid yellow 3px;
-
+  margin-left: auto; // Center the element
+  margin-right: auto; // Center the element
    
     // width: 100%;
     // height: 100%;
-    margin-left: auto; // Center the element
-    margin-right: auto; // Center the element
+  
   }
 
   .App{
@@ -32,13 +34,13 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height:100%;
+    height:100vh;
     padding-top: 45px;
   }
 
 
   .header{
-  border: solid red 1px;
+  
    
     height: $header-height-d/$desktop-height *100%;
     width: $body-width-d;
@@ -56,10 +58,40 @@
     
 }
 
+
+
+.banner{
+  border: solid blue 1px;
+  width: 100%;
+  height: 223px;
+  border-radius: 25px;
+opacity: 0.6;
+background: #000;
+
+mix-blend-mode: darken;
+
+img{
+  position: absolute;
+  top:0;
+}
+
+}
+
+
 .home{
+
+  border: solid red 1px;
+  display: flex;
+  flex-direction: column;
+  align-items:  center;
+  height:100%;
+  width: $body-width-d;
   margin-top:50px;
   margin-bottom:50px;
+  
 }
+
+
 
 .a_propos{
   margin: 38px 0 38px 0;
@@ -77,6 +109,8 @@
   }
     
 }
+
+
 
 
 
