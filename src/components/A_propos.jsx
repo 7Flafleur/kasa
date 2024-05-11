@@ -7,7 +7,7 @@ export default function Apropos () {
     return(
         <div className="apropos">
             <Banner img={img2} id="apropos-banner" />
-            {/* Other content */}
+            
         </div>
     )
 }

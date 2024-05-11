@@ -5,7 +5,14 @@ export default function Home () {
     return(
         <div className="home">
             <Banner img={img1} id="home-banner" />
-            <section className="gallery"></section>
+            <section className="gallery">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                
+            </section>
         </div>
     )
 }

@@ -32,9 +32,10 @@
     border: solid green 2px;
     display: flex; // Change this
     flex-direction: column;
+    gap:50px;
     align-items: center;
     width: 100%;
-    height:100vh;
+    min-height:100vh;
     padding-top: 45px;
   }
 
@@ -59,28 +60,36 @@
 }
 
 
-
-.banner{
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
   border: solid blue 1px;
   width: 100%;
-  height: 223px;
+  height: 20%;
   border-radius: 25px;
-opacity: 0.6;
-background: #000;
+  opacity: 0.6;
+  background: #000 url("./assets/img1l.jpg") no-repeat; // replace with your image path
+  background-size: cover;
+  background-position: center; // adjust this to control the position of the image
+  mix-blend-mode: darken;
 
-mix-blend-mode: darken;
-
-img{
-  position: absolute;
-  top:0;
+  img {
+    left: 0;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    width: $body-width-d;
+  }
 }
 
-}
-
+// .banner #home-banner {
+//   background-image: url("./assets/Image source 1.png");
+// }
 
 .home{
 
-  border: solid red 1px;
+  border: solid orange 2px;
   display: flex;
   flex-direction: column;
   align-items:  center;
@@ -89,6 +98,31 @@ img{
   margin-top:50px;
   margin-bottom:50px;
   
+}
+
+.gallery{
+  background-color: $grey;
+  border: solid pink 1px;
+  border-radius: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap:50px;
+  align-items: center;
+  justify-content: center;
+  margin:38px;
+  padding:30px 0 38px 0;
+  height:829px;
+  // height:75%;
+  width:100%;
+ 
+
+  div{
+    border:#000 solid 1px;
+    width: 27%;
+    height: 41%;
+  }
+
+
 }
 
 
@@ -102,7 +136,8 @@ img{
 
 .footer{
   background-color: $black;
-  height: $footer-height;
+  height: 209px;
+  margin-top: auto;
   width: 100%;
   img{
     width:100%;
