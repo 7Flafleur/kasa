@@ -1,12 +1,12 @@
 import Banner from "./Banner"
-import img2 from "../assets/Image source 2.png"
+import img2 from "../assets/im2.jpg"
 
 
 
 export default function Apropos () {
     return(
         <div className="apropos">
-            <Banner img={img2} id="apropos-banner" />
+            <Banner img={img2} chezvour={null} />
             
         </div>
     )
