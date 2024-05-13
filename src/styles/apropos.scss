@@ -1,5 +1,5 @@
 .apropos{
-    width:$body-width-d;
+    @include main;
   }
 
 .apropos_banner {

@@ -33,6 +33,16 @@ height:100%;
   line-height: 142.6%; 
 }
 
+@mixin main{
+  border: solid pink 2px;
+  display: flex;
+  flex-direction: column;
+  align-items:  center;
+  height:100%;
+  width:$main-content-width;
+
+  
+}
 // @mixin montserrat-font($uniquifier, $weight) {
 //   .montserrat-#{$uniquifier} {
 //     font-family: "Montserrat", sans-serif;
