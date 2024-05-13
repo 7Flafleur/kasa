@@ -1,0 +1,45 @@
+
+#p404{
+    
+    border: dashed pink 2px;
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    height:100vh;
+    width:$main-content-width;
+  gap: 139px;;
+    justify-content: center;
+}
+
+#notFoundTitle{
+    color: #FF6060;
+text-align: center;
+font-family: Montserrat;
+font-size: 288px;
+font-style: normal;
+font-weight: 700;
+line-height: 142.6%; /* 410.688px */
+margin:0;
+padding: 0;
+}
+
+
+#notFoundSubtitle{
+    color: #FF6060;
+font-family: Montserrat;
+font-size: 36px;
+font-style: normal;
+font-weight: 500;
+line-height: 142.6%; /* 51.336px */
+margin: 0;
+}
+
+#linkhome {
+    color: #000;
+font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 142.6%; /* 25.668px */
+text-decoration-line: underline;
+}
