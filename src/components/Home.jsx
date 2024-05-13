@@ -14,8 +14,8 @@ export default function Home () {
   <ul className="gallery">
 {
     logements.map(logement =>(
-        <li key={logement.id}>
-            <Link to={logement.id}>
+        <li className="card" key={logement.id}>
+            <Link to={logement.id}><div className="card_filter"><span className="title">{logement.title}</span></div>
             <img src={logement.cover} alt={logement.title} />
                 </Link>
         </li>

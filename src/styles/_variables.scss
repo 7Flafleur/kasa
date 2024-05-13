@@ -8,8 +8,8 @@ $opacity: 45%;
 
 
 ////////////////Screen dimensions////////////
-$bp-desktop:1440px;
-$bp-mobile:375px;
+
+$bp-mobile:"(max-width:414px)";
 
 
 
@@ -62,4 +62,6 @@ $apropos-picture-height-m:111px;
 $home-height: 72%;
 
 $apropos-picture-height-d:15%;
+
+$main-content-width:math.div($body-width-d,$desktop-width)*100%;
 

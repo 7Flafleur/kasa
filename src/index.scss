@@ -24,12 +24,14 @@
     padding: 0;
     width: 100vw;
     max-width: 1440px; 
-    max-height: $desktop-height;
+    min-height:100vh;
+    height:100%;
+
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-    overflow-x: hidden;
+    
     margin:auto;
-   
+   overflow-x: hidden;
   }
 
 
@@ -47,7 +49,8 @@
     gap:50px;
     align-items: center;
     width: 100%;
-    min-height:100vh;
+    
+    height: 100%;
     padding-top: 45px;
   }
 
@@ -55,7 +58,7 @@
 
   .header{
     height: math.div($header-height-d,$desktop-height) *100%;
-    width: $body-width-d;
+    width:  math.div($body-width-d,$desktop-width)*100%;;
     display: flex;
     justify-content: space-between ;
     img{
@@ -87,7 +90,9 @@
 
 
 
-
+// @media #{$bp-mobile} {
+  
+// }
 
 
 

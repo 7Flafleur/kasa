@@ -1,3 +1,7 @@
 .apropos{
     width:$body-width-d;
   }
+
+.apropos_banner {
+  @include apropos_background;
+}
