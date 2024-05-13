@@ -1,36 +1,48 @@
+@use "sass:math";
+
+
+
 @import './styles/_variables.scss';
 @import './styles/mixins';
+@import './styles/apropos.scss';
+@import './styles/banner.scss';
+@import './styles/card.scss';
+@import './styles/cardlist.scss';
+@import './styles/home.scss';
+
+
+
 
 * {
     box-sizing: border-box;
   }
 
-  body {  border: solid orange 1px;
+
+
+  body {  border: dashed orange 2px;
     margin: 0;
     padding: 0;
     width: 100vw;
-    max-width: 1440px; // Set max-width to 1440px
+    max-width: 1440px; 
     max-height: $desktop-height;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     overflow-x: hidden;
+    margin:auto;
    
   }
 
 
   #root {
   border: solid yellow 3px;
-  margin-left: auto; // Center the element
-  margin-right: auto; // Center the element
-   
-    // width: 100%;
-    // height: 100%;
-  
+  margin-left: auto; 
+  margin-right: auto; 
+     
   }
 
   .App{
     border: solid green 2px;
-    display: flex; // Change this
+    display: flex; 
     flex-direction: column;
     gap:50px;
     align-items: center;
@@ -39,116 +51,28 @@
     padding-top: 45px;
   }
 
-  .apropos{
-    width:$body-width-d;
-  }
-
+  // w> Recommendation: math.div($header-height-d, $desktop-height) or calc($header-height-d / $desktop-height)
 
   .header{
-  
-   
-    height: $header-height-d/$desktop-height *100%;
+    height: math.div($header-height-d,$desktop-height) *100%;
     width: $body-width-d;
     display: flex;
     justify-content: space-between ;
+    img{
+      height: math.div($logo-height-d, $header-height-d)*100%;
+      width: math.div($logo-width-d,$body-width-d)*100%;
+    }
   }
 
 
 .header_nav{
     // border: solid blue 1px;
-    width:$nav-width-d/$desktop-width *100%;
+    width:math.div($nav-width-d,$desktop-width) *100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     
 }
-
-
-.banner {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: solid blue 1px;
-  width: 100%;
-  height: 20%;
-  border-radius: 25px;
-
-  &::after {
-    content: "";
-    position: absolute;
-  border-radius:25px;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.6); // semi-transparent black
-  }
-
-  img {
-    left: 0;
-    object-fit: cover;
-    position: fixed;
-    top: 0;
-    width: $body-width-d;
-  }
-
- 
-}
-
-.chezvous{
-
-  @include medium-font;
-  color:#fff;
-  font-size: 48px;;
-}
-
-.home{
-
-  border: solid orange 2px;
-  display: flex;
-  flex-direction: column;
-  align-items:  center;
-  height:100%;
-  width: $body-width-d;
-  margin-top:50px;
-  margin-bottom:50px;
-  
-}
-
-.gallery{
-  background-color: $grey;
-  border: solid pink 1px;
-  border-radius: 25px;
-  display: flex;
-  flex-wrap: wrap;
-  gap:50px;
-  align-items: center;
-  justify-content: center;
-  margin:38px;
-  padding:30px 0 38px 0;
-  height:829px;
-  // height:75%;
-  width:100%;
- 
-
-  div{
-    border:#000 solid 1px;
-    width: 27%;
-    height: 41%;
-  }
-
-
-}
-
-
-
-.a_propos{
-  margin: 38px 0 38px 0;
-}
-
-
-
 
 .footer{
   background-color: $black;

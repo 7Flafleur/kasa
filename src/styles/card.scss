@@ -1,0 +1,18 @@
+.card{
+    display:block;
+    border:#000 solid 1px;
+    border-radius: 10px;
+    width: 27%;
+    height: 41%;
+     
+img {    object-fit: cover;
+    border-radius: 10px;;
+    height: 100%;
+    width: 100%;
+   }
+
+}
+
+.card-background{
+    @include card-background;
+}

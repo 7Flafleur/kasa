@@ -624,9 +624,9 @@ const logements = [
 ////////////////////FUNCTIONS/////////////////////////////
 
 export function getLogements(){
-    return logements.map(({id, title})=>({id,title}))
+    return logements.map(item=>item);
 }
 
 export function getLogement(Id){
-return logements.find((id)=> id === Id)       //return logemt that matches ID 
+return logements.find((item)=> item.id === Id)       //return logemt that matches ID 
 }

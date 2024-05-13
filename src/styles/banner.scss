@@ -1,0 +1,38 @@
+
+.home-banner{
+  border: yellow dotted 3px;
+}
+
+
+.banner {
+ 
+    align-items: center;
+    background:  lightgray 50% / cover no-repeat;
+    background-blend-mode: darken;
+    background-size: cover;
+    border-radius: 25px;
+    display: flex;
+    height: 223px;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+
+
+
+  }
+
+
+  
+  .chezvous{
+    color: #FFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: #000;
+    font-family: Montserrat;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 142.6%; /* 68.448px */
+  }
+  

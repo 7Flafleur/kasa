@@ -1,20 +1,28 @@
+import { Link } from "react-router-dom"
 import Banner from "./Banner"
-import img1l from "../assets/img1l.jpg"
+import img1 from "../assets/IMG1.png"
 import img2 from "../assets/im2.jpg"
+import rectangle from "../assets/Rectangle 1.png"
+import { getLogements } from "../api"
 
 
 export default function Home () {
+    const logements = getLogements();
     return(
         <div className="home">
-            <Banner  img={img2} />
-            <section className="gallery">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                
-            </section>
+           <Banner  img={img1} chezvous="Chez Vous, partout et ailleurs" />
+  <ul className="gallery">
+{
+    logements.map(logement =>(
+        <li key={logement.id}>
+            <Link to={logement.id}>
+            <img src={logement.cover} alt={logement.title} />
+                </Link>
+        </li>
+    ))
+}
+
+  </ul>
         </div>
     )
 }
