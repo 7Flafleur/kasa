@@ -5,7 +5,7 @@ export default function Banner (props) {
         <section id={props.id} className="banner"  style={{ backgroundImage: `url(${props.img})` }}>
   
                         <div className="banner_filter">
-                            <p className="chezvous">{props.chezvous}</p>
+                            {props.children}
                         </div>
         </section>
     )

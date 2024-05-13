@@ -10,7 +10,15 @@ export default function Home () {
     const logements = getLogements();
     return(
         <div className="home">
-           <Banner img={img1} chezvous="Chez Vous, partout et ailleurs"  />
+           <Banner img={img1} chezvous="Chez Vous, partout et ailleurs">
+           <p className="chezvous">Chez Vous, partout et ailleurs</p>
+            </Banner>
+
+
+
+
+
+
   <ul className="gallery">
 {
     logements.map(logement =>(
