@@ -30,8 +30,10 @@ export default function Collapse(props){
     <img src={chevdown} alt="" />
 </span>
             </div>
-         {content.map(contentItem => (<li className={`collapse_content ${isOpen? "visible" : "hidden"  }`}>{content}</li>
-))}
+         <div className={`licontainer ${props.subclass}`} >
+             {content.map((contentItem,index )=> (<li  key={index} className={`collapse_content ${isOpen? "visible" : "hidden"  }`}>{contentItem}</li>
+             ))}
+         </div>
         </ul>
     )
 

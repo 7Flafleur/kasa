@@ -10,6 +10,8 @@
 @import './styles/cardlist.scss';
 @import './styles/home.scss';
 @import './styles/pagenotfound.scss';
+@import './styles/property.scss';
+@import './styles/slideshow.scss';
 
 
 
@@ -26,7 +28,8 @@
     padding: 0;
 }
 
-  body {  border: dashed orange 2px;
+  body {  
+    // border: dashed orange 2px;
     margin: 0;
     padding: 0;
     width: 100vw;
@@ -41,7 +44,7 @@
 
 
   #root {
-  border: solid yellow 3px;
+  // border: solid yellow 3px;
   
   margin-left: auto; 
   margin-right: auto; 
@@ -49,7 +52,7 @@
   }
 
   .App{
-    border: solid green 2px;
+    // border: solid green 2px;
     display: flex; 
     flex-direction: column;
     gap:50px;

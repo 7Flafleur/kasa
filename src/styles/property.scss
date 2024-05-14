@@ -1,0 +1,16 @@
+@use "sass:math";
+
+
+
+@import '_variables.scss';
+@import 'mixins';
+
+
+.property{
+    @include main;
+}
+
+.details{
+    display: flex;
+    gap:76px;
+}

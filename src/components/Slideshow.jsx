@@ -1,5 +1,5 @@
-export default function Carousel(){
+export default function Carousel(props){
     return(
-        <div>This is a carousel</div>
+        <div className="carousel">This is a carousel for property {props.id}</div>
     )
 }

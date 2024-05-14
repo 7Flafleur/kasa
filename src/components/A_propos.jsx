@@ -24,7 +24,7 @@ export default function Apropos () {
             <ul className="Collapse_container"  >
                 {keywords.map(keyword => (
                     <li className="Collapse_component" key={keyword}>
-                        <Collapse keyword={keyword} content={getContent(keyword).content}/>
+                        <Collapse subclass="aprop" keyword={keyword} content={getContent(keyword).content}/>
                     </li>
                 ))}
             </ul>

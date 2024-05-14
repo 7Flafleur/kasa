@@ -1,0 +1,9 @@
+@use "sass:math";
+
+@import '_variables.scss';
+@import 'mixins';
+
+.carousel{
+    border: orange dashed 2px;
+    
+}

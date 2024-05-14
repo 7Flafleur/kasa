@@ -1,15 +1,14 @@
 import Apropos from "./components/A_propos"
-import Card from "./components/Card";
-import CardsList from "./components/CardsList"
 import Footer from "./components/Footer"
 import Home from "./components/Home"
 import Header from "./components/Header"
 import PageNotFound from "./components/PageNotFound";
-import Collapse from "./components/Collapse";
+
 
 
 
 import {  Routes, Route } from "react-router-dom";
+import Property from "./components/Property";
 
 
 
@@ -24,11 +23,9 @@ function App() {
     <Header/>
 
     <Routes>
-          <Route path="collapse" element={<Collapse />}/>
+         
           <Route path="about" element={<Apropos/>} />
-          <Route path="cardslist" element={<CardsList/>}>
-          <Route path=":Id" element={<Card/>} />
-          </Route>
+          <Route path="/Property/:Id" element={<Property  />} />
           <Route path="/" element={<Home/>} />
           <Route path="*" element={<PageNotFound/>} />
     </Routes>
