@@ -623,10 +623,44 @@ const logements = [
 
 ////////////////////FUNCTIONS/////////////////////////////
 
-export function getLogements(){
+export function getLogements(){                     //return array for encapsulation
     return logements.map(item=>item);
 }
 
 export function getLogement(Id){
 return logements.find((item)=> item.id === Id)       //return logemt that matches ID 
+}
+
+
+/////////////////////////////////
+
+const textesapropos =[
+	{
+		"id":"Fiabilité",
+		"content": "contenu fiabilité"
+	},
+
+	{
+		"id":"Respect",
+		"content":"contenu respect",
+	},
+	
+	{
+		"id":"Service",
+		"content":"contenu service",
+	}
+,
+{
+	"id":"Sécurité",
+	"content":"contenu sécurité",
+}
+
+]
+
+export function getContents(){
+	return textesapropos.map(item => item);
+}
+
+export function getContent(Id){
+	return textesapropos.find((item)=> item.id == Id)
 }
