@@ -30,7 +30,7 @@ export default function Collapse(props){
             <div className="dropdown"><span className="keyword">{props.keyword}</span>
             <span className="icons" style={iconStyle} onClick={handleClick}></span>
             </div>
-            <li className="collapse_content">{props.content}</li>
+            <li className={`collapse_content ${isOpen? "visible" : "hidden"  }`}>{props.content}</li>
         </ul>
     )
 
