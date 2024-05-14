@@ -9,9 +9,9 @@ export default function Collapse(props){
 
     const [isOpen,setIsOpen] = useState(false);
 
-    const iconStyle = {
-        backgroundImage: `url(${isOpen ? chevdown : chevup})`,
-    };
+    const iconStyle = 
+         isOpen ? chevdown : chevup
+    
 
 //     function toggleCollapse(){
 // setIsOpen(!isOpen)
@@ -28,7 +28,13 @@ export default function Collapse(props){
         <ul className="Collapse">
             {isOpen ? "The dropdown is open" : "The dropdown is closed"}
             <div className="dropdown"><span className="keyword">{props.keyword}</span>
-            <span className="icons" style={iconStyle} onClick={handleClick}></span>
+            <span className={`icons ${isOpen ? "rotated" : ""}`} onClick={handleClick}>
+    <img src={chevdown} alt="" />
+</span>
+            {/* <span className="icons" onClick={handleClick}>   
+                     <img className={isOpen ? "hidden" : "visible"} src={chevdown} alt="" />
+                    <img className={isOpen ? "visible" : "hidden"} src={chevup} alt="" />
+                    </span> */}
             </div>
             <li className={`collapse_content ${isOpen? "visible" : "hidden"  }`}>{props.content}</li>
         </ul>

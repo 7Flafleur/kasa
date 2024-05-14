@@ -59,6 +59,7 @@ line-height: 142.6%; /* 25.668px */
 }
 
 .icons{
+    position: relative;
     border: #FFF solid 1px;
    transition: background-image 1s ease;
     color: #fff;
@@ -68,4 +69,10 @@ height: 32px;
 flex-shrink: 0;
 }
 
+.icons img {
+    transition: transform 0.3s ease-in-out;
+}
 
+.icons.rotated img {
+    transform: rotate(180deg);
+}
