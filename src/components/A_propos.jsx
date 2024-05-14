@@ -21,7 +21,7 @@ export default function Apropos () {
     return(
         <div className="apropos">
             <Banner  img={img2} chezvouz="" />
-            <ul className="Collapse_container">
+            <ul className="Collapse_container"  >
                 {keywords.map(keyword => (
                     <li className="Collapse_component" key={keyword}>
                         <Collapse keyword={keyword} content={getContent(keyword).content}/>

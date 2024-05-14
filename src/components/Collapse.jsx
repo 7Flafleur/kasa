@@ -13,10 +13,8 @@ export default function Collapse(props){
          isOpen ? chevdown : chevup
     
 
-//     function toggleCollapse(){
-// setIsOpen(!isOpen)
-//     }
-
+         
+    const content= Array.isArray(props.content) ? props.content : [props.content]
     
 
     function handleClick() {
@@ -26,17 +24,14 @@ export default function Collapse(props){
 
     return(
         <ul className="Collapse">
-            {isOpen ? "The dropdown is open" : "The dropdown is closed"}
+            {/* {isOpen ? "The dropdown is open" : "The dropdown is closed"} */}
             <div className="dropdown"><span className="keyword">{props.keyword}</span>
             <span className={`icons ${isOpen ? "rotated" : ""}`} onClick={handleClick}>
     <img src={chevdown} alt="" />
 </span>
-            {/* <span className="icons" onClick={handleClick}>   
-                     <img className={isOpen ? "hidden" : "visible"} src={chevdown} alt="" />
-                    <img className={isOpen ? "visible" : "hidden"} src={chevup} alt="" />
-                    </span> */}
             </div>
-            <li className={`collapse_content ${isOpen? "visible" : "hidden"  }`}>{props.content}</li>
+         {content.map(contentItem => (<li className={`collapse_content ${isOpen? "visible" : "hidden"  }`}>{content}</li>
+))}
         </ul>
     )
 
@@ -50,20 +45,3 @@ export default function Collapse(props){
 
 
 
-
-
-// import { useState } from "react";
-
-// export default function YourComponent() {
-//     const [isRotated, setIsRotated] = useState(false);
-
-//     function handleClick() {
-//         setIsRotated(!isRotated);
-//     }
-
-//     return (
-//         <div className={`icons ${isRotated ? "rotate" : ""}`} onClick={handleClick}>
-//             {/* Your icon here */}
-//         </div>
-//     );
-// }
