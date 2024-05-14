@@ -25,13 +25,13 @@ export default function Collapse(props){
     }
 
     return(
-        <div className="Collapse">
+        <ul className="Collapse">
             {isOpen ? "The dropdown is open" : "The dropdown is closed"}
             <div className="dropdown"><span className="keyword">{props.keyword}</span>
             <span className="icons" style={iconStyle} onClick={handleClick}></span>
             </div>
-            {/* <button onClick={toggleCollapse}>Toggle</button> */}
-        </div>
+            <li className="collapse_content">{props.content}</li>
+        </ul>
     )
 
 

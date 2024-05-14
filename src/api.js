@@ -661,6 +661,10 @@ export function getContents(){
 	return textesapropos.map(item => item);
 }
 
+export function getKeywords(){
+	return textesapropos.map(item => item.id);
+}
+
 export function getContent(Id){
-	return textesapropos.find((item)=> item.id == Id)
+	return textesapropos.find((item)=> item.id === Id)
 }

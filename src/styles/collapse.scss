@@ -3,25 +3,29 @@
 @import './_mixins.scss';
 @import './variables.scss';
 
-.Collapse_container{
-    border: gray dashed 2px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap:30px;
-    margin: 38px 0 38px 0;
-width: $main-content-width;
-list-style-type: none;
-padding: 0;
 
-li{
-    border: red solid 2px;
+.Collapse{
+    border: red dashed 3px;
+    width:100%;
+    padding:0;
+    margin:0;
+    list-style-type: none;
+}
+
+.collapse_content{
+    border: blue dashed 2px;
     width:100%;
     margin:0;
     padding:0;
+    background-color: #f7f7f7 ;
+    color: $red;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.6%;
 }
 
-}
+
 
 .dropdown{
     display: flex;

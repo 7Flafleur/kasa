@@ -1,7 +1,7 @@
 import Banner from "./Banner"
 import img2 from "../assets/im2.jpg"
 import Collapse from "./Collapse"
-import { getContents } from "../api"
+import { getContents, getKeywords } from "../api"
 import { getContent } from "../api"
 
 
@@ -10,29 +10,26 @@ import { getContent } from "../api"
 
 export default function Apropos () {
 
-    const contents=getContents();
+    const keywords=getKeywords();
+
+    console.log(keywords)
+
+    // const content=getContent("Fiabilité").content
+
+    // console.log("content:",content)
 
     return(
         <div className="apropos">
-            
-                <Banner  img={img2} chezvouz="" />
-
-                <ul className="Collapse_container">
-                    <li>
-                        <Collapse keyword="Fiabilité"/>
+            <Banner  img={img2} chezvouz="" />
+            <ul className="Collapse_container">
+                {keywords.map(keyword => (
+                    <li className="Collapse_component" key={keyword}>
+                        <Collapse keyword={keyword} content={getContent(keyword).content}/>
                     </li>
-                    <li>
-                        <Collapse keyword="Respect" />
-                    </li>
-                    <li>
-                        <Collapse keyword="Service"   />
-                    </li>
-                    <li>
-                        <Collapse keyword="Sécurité"/>
-                    </li>
-                </ul>
-            
-            
+                ))}
+            </ul>
         </div>
     )
+
+    
 }
