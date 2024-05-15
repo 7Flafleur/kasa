@@ -5,5 +5,34 @@
 
 .carousel{
     border: orange dashed 2px;
-    
+    width:100%;
+    height: math.div(415,1240)*100%;
+    margin: 0;
+    padding: 0;
+    list-style-type:none;
+    li{
+        margin:0;
+        padding:0;
+        width:100%;
+        height: 100%;
+    }
+}
+
+.carouselItem {
+    display:none;
+width:100%;
+
+margin:0;
+padding:0;
+
+.picture{
+    object-fit: cover;
+    width:100%;
+    height: math.div(415,1240)*100%;
+}
+
+&.active{
+    display: block;
+}
+
 }
