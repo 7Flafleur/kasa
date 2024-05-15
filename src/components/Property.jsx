@@ -19,10 +19,13 @@ export default function Property(){
 <div className="property">
     <Carousel id={Id}/>
     <div className="title">
-        <h1></h1>
-        <h2></h2>
+        <h1>{logement.title}</h1>
+        <h2>{logement.location}</h2>
     </div>
-    <aside className="host"><h3></h3><img src="" alt="" /></aside>
+    <aside className="host"><img src={logement.host.picture} alt="" />
+    <h3>{logement.host.name} </h3>
+    
+    </aside>
     <aside className="tags"><span></span><span></span></aside>
     <div className="rate"></div>
     <div className="details">
