@@ -4,6 +4,7 @@
 @import 'mixins';
 
 .carousel{
+    position: relative;
     border: orange dashed 2px;
     width:100%;
     height: math.div(415,1240)*100%;
@@ -35,4 +36,13 @@ padding:0;
     display: block;
 }
 
+}
+
+.btn {
+    position: absolute;
+    top:50%;
+
+    &.next{
+        right:0;
+    }
 }
