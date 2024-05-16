@@ -2,6 +2,9 @@ import { getLogement } from "../api";
 import Carousel from "./Slideshow"
 import { useParams } from "react-router-dom"
 import Collapse from "./Collapse";
+import { Star } from "./star";
+
+
 
 export default function Property(){
 
@@ -15,19 +18,36 @@ export default function Property(){
 
     console.log("equipements:",equipements)
 
+    const rating= logement.rating
+
     return(
 <div className="property">
     <Carousel id={Id}/>
-    <div className="title">
-        <h1>{logement.title}</h1>
-        <h2>{logement.location}</h2>
+    <div className="property_infos">
+        <div className="left">
+            <div className="infotitle">
+                <h1>{logement.title}</h1>
+                <h2>{logement.location}</h2>
+            </div>
+            <aside className="tags"><span>1</span><span>2</span></aside>
+            
+        </div>
+
+
+        <div className="right">
+            <aside className="host"><h3>{logement.host.name} </h3> <img src={logement.host.picture} alt="" />
+           
+            
+            </aside>
+            <div className="rate">
+  <Star filled={rating >= 1} />
+  <Star filled={rating >= 2} />
+  <Star filled={rating >= 3} />
+  <Star filled={rating >= 4} />
+  <Star filled={rating >= 5} />
+</div>
+        </div>
     </div>
-    <aside className="host"><img src={logement.host.picture} alt="" />
-    <h3>{logement.host.name} </h3>
-    
-    </aside>
-    <aside className="tags"><span></span><span></span></aside>
-    <div className="rate"></div>
     <div className="details">
         <Collapse subclass="prop" keyword="Description" content={logement.description}/>
         <Collapse subclass="prop" keyword="Equipements" content={equipements}  />

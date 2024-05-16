@@ -10,13 +10,61 @@
     @include main;
 }
 
+.property_infos{
+    border: orange dashed 2px;
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+    padding:10px 0 10px 0;
+}
+
+.left{
+    border: blue dashed 2px;
+    flex:2;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: blue dashed 2px;
+    flex:1;
+    
+}
+
 .details{
+    border: yellow dashed 5px;
     display: flex;
     gap:76px;
     width: 100%;
 }
 
-.title{
+.infotitle{
     color:$red;
+}
+
+.host{
+    color: $red;
+    display: flex;
+    justify-content: space-between;
+    img{
+        border-radius: 50%;
+        width: 64px;
+        height: 64px;
+    }
+   h3{
+    
+    display: inline;
+   
+} 
+}
+
+.star{
+   
+    display: inline;
+    width: 36px;
+    height: 36px;
+
+
 }
 
