@@ -8,18 +8,37 @@
 
 .property{
     @include main;
+    border: none;
 }
 
 .property_infos{
-    border: orange dashed 2px;
+    
     display:flex;
     justify-content: space-between;
     width:100%;
     padding:10px 0 10px 0;
 }
 
+h1{
+    color: #FF6060;
+font-family: Montserrat;
+font-size: 36px;
+font-style: normal;
+font-weight: 500;
+line-height: 142.6%; /* 51.336px */
+}
+
+h2{
+    color: #000;
+font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 142.6%; /* 25.668px */
+}
+
 .left{
-    border: blue dashed 2px;
+   
     flex:2;
 }
 
@@ -27,13 +46,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: blue dashed 2px;
+    
     flex:1;
     
 }
 
 .details{
-    border: yellow dashed 5px;
+    
     display: flex;
     gap:76px;
     width: 100%;
@@ -55,6 +74,13 @@
    h3{
     
     display: inline;
+    color: #FF6060;
+text-align: right;
+font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 142.6%; /* 25.668px */
    
 } 
 }
