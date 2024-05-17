@@ -96,3 +96,18 @@ flex-shrink: 0;
 .icons.rotated img {
     transform: rotate(180deg);
 }
+
+@media  (max-width:768px) {
+
+
+.dropdown{
+color: #FFF;
+font-family: Montserrat;
+font-size: 13px;
+font-style: normal;
+font-weight: 700;
+line-height: 142.6%; /* 18.538px */
+    }
+
+
+}

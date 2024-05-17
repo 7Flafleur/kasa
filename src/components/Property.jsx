@@ -1,25 +1,40 @@
 import { getLogement } from "../api";
 import Carousel from "./Slideshow"
 import { useParams } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 import Collapse from "./Collapse";
 import { Star } from "./star";
 import Tag from "./Tag";
+import { useEffect } from "react";
+
+
 
 
 
 export default function Property(){
 
-  
+  const navigate = useNavigate();
 
     const {Id} =useParams();
 
     const logement= getLogement(Id);
 
     console.log(logement)
+    useEffect(() => {
+        if (logement === undefined) {
+          navigate("/Property/404");
+        }
+      }, [logement, navigate]);
+    
+      if (logement === undefined) {
+        return null; 
+      }
+    
+    console.log(logement)
 
     const equipements = logement.equipments.map(equipement=>equipement)
 
-    console.log("equipements:",equipements);
+  
 
     const tags=logement.tags;
 

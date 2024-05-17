@@ -57,3 +57,12 @@ font-weight: 700;
 line-height: 142.6%; /* 25.668px */
 width: math.div(300,340)*100%;
 }
+
+
+@media (max-width: 768px) {
+    .card {
+        width: 89.33vw; // 335 / 375 * 100 = 89.33%
+        height: calc(89.33vw / 1.31); // maintaining the 335 / 255 ratio
+        flex-shrink: 0;
+    }
+}

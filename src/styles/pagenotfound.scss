@@ -43,3 +43,29 @@ font-weight: 500;
 line-height: 142.6%; /* 25.668px */
 text-decoration-line: underline;
 }
+
+
+
+@media (max-width: 768px) {
+    #p404 {
+        gap: 20px;
+        padding: 20px;
+    }
+
+    #notFoundTitle {
+        font-size: 96px;
+        line-height: 1.2; /* Adjust to maintain visual balance */
+    }
+
+    #notFoundSubtitle {
+        font-size: 24px;
+        line-height: 1.2; /* Adjust to maintain visual balance */
+        text-align: center;
+    }
+
+    #linkhome {
+        font-size: 16px;
+        line-height: 1.2; /* Adjust to maintain visual balance */
+        text-align: center;
+    }
+}

@@ -27,6 +27,7 @@ function App() {
           <Route path="about" element={<Apropos/>} />
           <Route path="/Property/:Id" element={<Property  />} />
           <Route path="/" element={<Home/>} />
+          <Route path="/Property/404" element={<PageNotFound/>}/>
           <Route path="*" element={<PageNotFound/>} />
     </Routes>
 

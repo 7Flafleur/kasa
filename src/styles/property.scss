@@ -104,6 +104,7 @@ line-height: 142.6%; /* 25.668px */
 @media (max-width: 768px) {
     .property_infos {
         flex-direction: column;
+        width:100%;
     }
 
     .left, .right {
@@ -111,13 +112,21 @@ line-height: 142.6%; /* 25.668px */
         padding-left: 0;
     }
 
+
     .details {
+        
         flex-direction: column;
         gap: 20px;
+        color: #FFF;
+font-family: Montserrat;
+font-size: 13px;
+font-style: normal;
+font-weight: 700;
+line-height: 142.6%; /* 18.538px */
     }
 
     .host {
-        justify-content: center;
+        justify-content: flex-end;
         text-align: center;
 
         img {
@@ -127,12 +136,19 @@ line-height: 142.6%; /* 25.668px */
         }
 
         h3 {
+            margin-top: 1.5em;;
             font-size: 16px;
         }
+    }
+
+    .rate{
+        margin-top: -2em;
+        margin-bottom: 1em;;
     }
 
     .star {
         width: 24px;
         height: 24px;
+        margin-top:-20px;
     }
 }
