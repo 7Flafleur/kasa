@@ -100,3 +100,39 @@ line-height: 142.6%; /* 25.668px */
 
 }
 
+
+@media (max-width: 768px) {
+    .property_infos {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .details {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .host {
+        justify-content: center;
+        text-align: center;
+
+        img {
+            margin-top: 10px;
+            width: 50px;
+            height: 50px;
+        }
+
+        h3 {
+            font-size: 16px;
+        }
+    }
+
+    .star {
+        width: 24px;
+        height: 24px;
+    }
+}
