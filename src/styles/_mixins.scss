@@ -14,7 +14,6 @@ width:100%;
 height:100%;
   }
   
-
 @mixin card-size-d {
     width: 340px;
     height: 340px;
@@ -34,7 +33,7 @@ height:100%;
 }
 
 @mixin main{
-  border: solid pink 2px;
+  // border: solid pink 2px;
   display: flex;
   flex-direction: column;
   align-items:  center;
