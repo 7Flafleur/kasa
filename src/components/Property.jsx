@@ -3,10 +3,13 @@ import Carousel from "./Slideshow"
 import { useParams } from "react-router-dom"
 import Collapse from "./Collapse";
 import { Star } from "./star";
+import Tag from "./Tag";
 
 
 
 export default function Property(){
+
+  
 
     const {Id} =useParams();
 
@@ -16,9 +19,11 @@ export default function Property(){
 
     const equipements = logement.equipments.map(equipement=>equipement)
 
-    console.log("equipements:",equipements)
+    console.log("equipements:",equipements);
 
-    const rating= logement.rating
+    const tags=logement.tags;
+
+    const rating= logement.rating;
 
     return(
 <div className="property">
@@ -29,7 +34,14 @@ export default function Property(){
                 <h1>{logement.title}</h1>
                 <h2>{logement.location}</h2>
             </div>
-            <aside className="tags"><span>1</span><span>2</span></aside>
+            <aside className="tags">
+              {
+                tags.map((tag,index) => (
+                    <Tag key={index} tag={tags[index]}/>
+                ))
+              }
+                
+                </aside>
             
         </div>
 

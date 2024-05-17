@@ -1,0 +1,30 @@
+@use "sass:math";
+
+@import '_variables.scss';
+@import 'mixins';
+
+
+.tags{
+    display: flex;
+    gap:1em;
+}
+
+.tag{
+    width: 115px;
+height: 25px;
+flex-shrink: 0;
+border-radius: 10px;
+background: $red;
+color: #FFF;
+font-family: Montserrat;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 142.6%; /* 19.964px */
+flex-shrink: 1;
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
