@@ -65,8 +65,11 @@ line-height: 142.6%; /* 25.668px */
 .host{
     color: $red;
     display: flex;
-    justify-content: space-between;
+    justify-content:flex-end;
+    gap: 8px;
+    align-items: flex-start;
     img{
+        margin-top: 10px;
         border-radius: 50%;
         width: 64px;
         height: 64px;

@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom"
 import Banner from "./Banner"
 import img1 from "../assets/IMG1.png"
-import img2 from "../assets/im2.jpg"
-import rectangle from "../assets/Rectangle 1.png"
 import { getLogements } from "../api"
 
 

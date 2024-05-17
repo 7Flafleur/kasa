@@ -30,13 +30,13 @@ function previousItem() {
     return(
         <ul className="carousel">
             
-            <button className=" btn previous" >
-            <FontAwesomeIcon icon={faChevronLeft} onClick={previousItem} />
-                </button>
-            <button className="btn next" >
+            
+            <FontAwesomeIcon className="btn prev" icon={faChevronLeft} onClick={previousItem} />
                 
-                <FontAwesomeIcon icon={faChevronRight} onClick={nextItem} />
-                </button>
+         
+                
+                <FontAwesomeIcon className="btn next" icon={faChevronRight} onClick={nextItem} />
+             
 
     {
         pictures.map((picture,index)=>(
