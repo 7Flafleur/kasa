@@ -37,7 +37,7 @@ export default function Property(){
             <aside className="tags">
               {
                 tags.map((tag,index) => (
-                    <Tag key={index} tag={tags[index]}/>
+                    <Tag key={index} taginfo={tags[index]}/>
                 ))
               }
                 

@@ -1,13 +1,10 @@
 
-
+import PropTypes from 'prop-types';
 
 export default function Tag(props){
 
     return(
-        <span className="tag">{props.tag}</span>
-
-
-
+        <span className="tag">{props.taginfo}</span>
 
     )
 
@@ -17,3 +14,8 @@ export default function Tag(props){
 
 
 }
+
+
+Tag.propTypes = {
+    taginfo: PropTypes.string.isRequired,
+};
