@@ -1,27 +1,33 @@
-import Apropos from "./components/A_propos"
+
 import Footer from "./components/Footer"
-import Home from "./components/Home"
+
 import Header from "./components/Header"
-import PageNotFound from "./components/PageNotFound";
-
-
-
 
 import {  Routes, Route } from "react-router-dom";
-import Property from "./components/Property";
+
+import {Suspense, lazy } from 'react';
 
 
 
 
+const Apropos = lazy(() => import("./components/A_propos"));
+const Home = lazy(() => import("./components/Home"));
+
+// const Home = lazy(() => new Promise(resolve => 
+//   setTimeout(resolve, 2000)
+// ).then(() => import("./components/Home")));
+
+const PageNotFound = lazy(() => import("./components/PageNotFound"));
+const Property = lazy(() => import("./components/Property"));
 
 
-function App() {
+export default function App() {
   return (
     <div className="App">
 
 
     <Header/>
-
+    <Suspense fallback={<div className="fallback">Un instant svp...</div>}>
     <Routes>
          
           <Route path="about" element={<Apropos/>} />
@@ -30,11 +36,10 @@ function App() {
           <Route path="/Property/404" element={<PageNotFound/>}/>
           <Route path="*" element={<PageNotFound/>} />
     </Routes>
-
+    </Suspense>
     <Footer/>
 
     </div >
   );
 }
 
-export default App;

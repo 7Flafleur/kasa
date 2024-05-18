@@ -1,14 +1,12 @@
 import { useParams } from "react-router-dom"
 import { useState } from "react";
 import { getLogement } from "../api";
-import previous from "../assets/Vector left.png"
-import next from "../assets/Vector right.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft,faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 
 
-export default function Carousel(props){
+export default function Carousel(){
 
     const [activeIndex, setActiveIndex] =useState(0);
 
@@ -51,3 +49,5 @@ function previousItem() {
             </ul>
     )
 }
+
+

@@ -1,17 +1,13 @@
 import { useState } from "react";
 import '../styles/collapse.scss'
-import chevup from "../assets/chevup.png"
 import chevdown from "../assets/chevdown.png"
+import PropTypes from 'prop-types';
 
 
 
 export default function Collapse(props){
 
     const [isOpen,setIsOpen] = useState(false);
-
-    const iconStyle = 
-         isOpen ? chevdown : chevup
-    
 
          
     const content= Array.isArray(props.content) ? props.content : [props.content]
@@ -38,12 +34,16 @@ export default function Collapse(props){
     )
 
 
-
-
-
-
 }
 
+Collapse.propTypes = {
+    content: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.arrayOf(PropTypes.string)
+    ]).isRequired,
+    keyword: PropTypes.string.isRequired,
+    subclass: PropTypes.string,
+};
 
 
 

@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 
 export default function Banner (props) {
     return(
@@ -10,3 +10,9 @@ export default function Banner (props) {
         </section>
     )
 }
+
+Banner.propTypes = {
+    id: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    children: PropTypes.node,
+};

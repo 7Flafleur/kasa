@@ -87,14 +87,35 @@
 }
 
 .footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: $black;
+  color: #fff;
   height: 209px;
   margin-top: auto;
   width: 100%;
-  img{
-    width:100%;
+
+  .logocontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
   }
+
+ .Flogo{
+  color:#fff;
+ }
     
+}
+
+.fallback{
+  color: #FF6060;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%;
 }
 
 
@@ -102,6 +123,9 @@
 // @media #{$bp-mobile} {
   
 // }
+
+
+
 
 
 
@@ -130,14 +154,23 @@ flex-shrink: 0;
     }
 }
   .footer {
+   
       flex-direction: column;
-      align-items: center;
-      padding: 20px;
 
-      p {
-          margin: 10px 0;
-          text-align: center;
-      }
+      padding: 20px;    
+  }
+
+  .logocontainer{
+    width:50%;
+
+    .kasa{
+    
+      text-align: center;
+      width:75%;
+
+      
+      
+    }
   }
 }
 

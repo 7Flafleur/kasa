@@ -1,7 +1,7 @@
 import Banner from "./Banner"
 import img2 from "../assets/im2.jpg"
 import Collapse from "./Collapse"
-import { getContents, getKeywords } from "../api"
+import { getKeywords } from "../api"
 import { getContent } from "../api"
 
 
