@@ -1,8 +1,8 @@
 import Banner from "./Banner"
 import img2 from "../assets/im2.jpg"
 import Collapse from "./Collapse"
-import { getKeywords } from "../api"
-import { getContent } from "../api"
+import { getLogements, getLogement, getContents, getKeywords, getContent } from '../dataretrievalfunctions';
+
 
 
 

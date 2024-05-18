@@ -1,11 +1,26 @@
+import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom"
 import Banner from "./Banner"
 import img1 from "../assets/IMG1.png"
-import { getLogements } from "../api"
+import { getLogements } from "../dataretrievalfunctions"
 
 
 export default function Home () {
-    const logements = getLogements();
+    const [logements, setLogements] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchLogements = async () => {
+    const data = await getLogements();
+            setLogements(data);
+            setIsLoading(false);}
+
+        fetchLogements();
+    }, []);
+
+    if (isLoading){
+        return <div className='fallback'>Un instant svp...</div>
+    }
 
     
     return(
