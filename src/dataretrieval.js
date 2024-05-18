@@ -1,7 +1,7 @@
 import { datalogements } from "./api";
-// import { datatextesapropos } from "./api";
+import { datatextesapropos } from "./api";
 
-const datatextesapropos=[1,2,3]
+
 
 function checkImport(value, name) {
     if (!value) {
