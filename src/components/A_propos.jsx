@@ -2,7 +2,11 @@ import { useState,useEffect } from "react"
 import Banner from "./Banner"
 import img2 from "../assets/im2.jpg"
 import Collapse from "./Collapse"
-import { getContent,getKeywords } from "../dataretrieval"
+import { getLogements, getLogement, getContents, getKeywords, getContent } from '../dataretrievalfunctions';
+
+
+
+
 
 
 export default function Apropos () {

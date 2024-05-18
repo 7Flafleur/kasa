@@ -15,7 +15,7 @@ checkImport(datatextesapropos, 'datatextesapropos');
 
 const logements= 
 datalogements.map(item => item);
-const textesapropos=datatextesapropos.map(item =>item);
+const textesapropos=[1,2,3]
 
 
 export function getLogements(){  
@@ -41,14 +41,14 @@ export function getContents(){
 }
 
 export function getKeywords(){
-    if (!textesapropos) {
+    if (!datatextesapropos.every(item => Object.prototype.hasOwnProperty.call(item,'id'))) {
         throw new Error('contenu indisponible');
     }
 	return textesapropos.map(item => item.id);
 }
 
 export function getContent(Id){
-    if (!textesapropos.some(item => item.id === Id)) {
+    if (!datatextesapropos.every(item => Object.prototype.hasOwnProperty.call(item,'id'))) {
         throw new Error('contenu indisponible');
     }
 
