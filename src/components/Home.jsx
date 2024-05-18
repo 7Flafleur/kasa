@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom"
-import { useState,useEffect } from "react"
 import Banner from "./Banner"
 import img1 from "../assets/IMG1.png"
 import { getLogements } from "../dataretrieval"

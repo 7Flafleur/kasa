@@ -15,20 +15,21 @@ checkImport(datatextesapropos, 'datatextesapropos');
 
 const logements= 
 datalogements.map(item => item);
-const textesapropos=[1,2,3]
+const textesapropos= 
+datatextesapropos.map(item => item)
 
 
 export function getLogements(){  
-	if (!logements) {
-        throw new Error('logements indisponibles');
+    if (!logements.every(item => Object.prototype.hasOwnProperty.call(item,'id'))) {
+        throw new Error('contenu indisponible');
     }                   //return array for encapsulation
     return logements.map(item=>item);
 }
 
 export function getLogement(Id){
 	
-	if (!logements) {
-        throw new Error('logements indisponibles');
+    if (!logements.every(item => Object.prototype.hasOwnProperty.call(item,'id'))) {
+        throw new Error('contenu indisponible');
     }
 return logements.find((item)=> item.id === Id)       //return logemt that matches ID 
 }
@@ -41,14 +42,14 @@ export function getContents(){
 }
 
 export function getKeywords(){
-    if (!datatextesapropos.every(item => Object.prototype.hasOwnProperty.call(item,'id'))) {
+    if (!textesapropos.every(item => Object.prototype.hasOwnProperty.call(item,'id'))) {
         throw new Error('contenu indisponible');
     }
 	return textesapropos.map(item => item.id);
 }
 
 export function getContent(Id){
-    if (!datatextesapropos.every(item => Object.prototype.hasOwnProperty.call(item,'id'))) {
+    if (!textesapropos.every(item => Object.prototype.hasOwnProperty.call(item,'id'))) {
         throw new Error('contenu indisponible');
     }
 
