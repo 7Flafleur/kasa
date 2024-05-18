@@ -1,22 +1,47 @@
+import { useState,useEffect } from "react"
 import Banner from "./Banner"
 import img2 from "../assets/im2.jpg"
 import Collapse from "./Collapse"
-import { getKeywords } from "../api"
-import { getContent } from "../api"
-
-
-
+import { getContent,getKeywords } from "../dataretrieval"
 
 
 export default function Apropos () {
 
-    const keywords=getKeywords();
+    const [keywords, setkeywords] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
 
-    console.log(keywords)
 
-    // const content=getContent("Fiabilité").content
+    useEffect(() => {
+        const fetchkeywords = async () => {
 
-    // console.log("content:",content)
+            try{
+                const data = await getKeywords();
+                setkeywords(data);
+            }
+            catch(err){
+                setError(err.message)
+            }
+            finally{
+                setIsLoading(false)
+            }
+
+        }
+        fetchkeywords();
+
+    },[]
+
+
+    )
+
+    
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div >Contenu indisponible</div>;
+    }
 
     return(
         <div className="apropos">

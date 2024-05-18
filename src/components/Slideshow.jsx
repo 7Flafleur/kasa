@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
-import { useState } from "react";
-import { getLogement } from "../api";
+import { useState,useEffect } from "react";
+import { getLogement } from "../dataretrieval";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft,faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
@@ -9,10 +9,38 @@ import { faChevronLeft,faChevronRight } from '@fortawesome/free-solid-svg-icons'
 export default function Carousel(){
 
     const [activeIndex, setActiveIndex] =useState(0);
+    const [logement, setLogement] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     const {Id} =useParams();
 
-    const logement= getLogement(Id);
+    
+    useEffect(() => {
+        const fetchLogement = async () => {
+            try {
+                const data = await getLogement(Id);
+                setLogement(data);
+
+            } catch (err) {
+                setError(err.message);
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchLogement();
+    }, [Id]);
+
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div className="carousel">Erreur:{error}</div>;
+    }
+
+   
 
 
 const pictures=logement.pictures;

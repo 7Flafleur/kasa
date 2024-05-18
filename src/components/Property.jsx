@@ -1,4 +1,4 @@
-import { getLogement } from "../api";
+import { getLogement } from "../dataretrieval";
 import Carousel from "./Slideshow"
 import { useParams } from "react-router-dom"
 import { useNavigate } from "react-router-dom";

@@ -1,4 +1,4 @@
-const logements = [
+export const datalogements = [
 	{
 		"id": "c67ab8a7",
 		"title": "Appartement cosy",
@@ -623,19 +623,26 @@ const logements = [
 
 ////////////////////FUNCTIONS/////////////////////////////
 
-export function getLogements(){                     //return array for encapsulation
-    return logements.map(item=>item);
-}
+// export function getLogements(logements){  
+// 	if (!logements) {
+//         throw new Error('logements indisponibles');
+//     }                   //return array for encapsulation
+//     return logements.map(item=>item);
+// }
 
-export function getLogement(Id){
-return logements.find((item)=> item.id === Id)       //return logemt that matches ID 
-}
+// export function getLogement(logements,Id){
+	
+// 	if (!logements) {
+//         throw new Error('logements indisponibles');
+//     }
+// return logements.find((item)=> item.id === Id)       //return logemt that matches ID 
+// }
 
 
 
 /////////////////////////////////
 
-const textesapropos =[
+export const datatextesapropos =[
 	{
 		"id":"Fiabilité",
 		"content": "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes."
@@ -658,14 +665,3 @@ const textesapropos =[
 
 ]
 
-export function getContents(){
-	return textesapropos.map(item => item);
-}
-
-export function getKeywords(){
-	return textesapropos.map(item => item.id);
-}
-
-export function getContent(Id){
-	return textesapropos.find((item)=> item.id === Id)
-}
