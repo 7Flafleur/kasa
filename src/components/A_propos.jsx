@@ -2,7 +2,7 @@ import { useState,useEffect } from "react"
 import Banner from "./Banner"
 import img2 from "../assets/im2.jpg"
 import Collapse from "./Collapse"
-import { getLogements, getLogement, getContents, getKeywords, getContent } from '../dataretrieval'
+import { getKeywords, getContent } from '../dataretrieval'
 
 
 

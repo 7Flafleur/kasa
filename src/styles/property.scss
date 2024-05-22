@@ -49,6 +49,7 @@ line-height: 142.6%; /* 25.668px */
     flex-direction: column;
     justify-content: space-between;
     padding-left: 2.5em;
+    align-items: flex-end;
     
     flex:1;
     
@@ -66,6 +67,7 @@ line-height: 142.6%; /* 25.668px */
 }
 
 .host{
+    
     color: $red;
     display: flex;
     justify-content:flex-end;
@@ -90,6 +92,15 @@ line-height: 142.6%; /* 25.668px */
    
 } 
 }
+
+.rate{
+    
+    
+    display: inline;
+    width:188px;
+}
+
+
 
 .star{
    
@@ -143,7 +154,8 @@ line-height: 142.6%; /* 18.538px */
 
     .rate{
         margin-top: -2em;
-        margin-bottom: 1em;;
+        margin-bottom: 1em;
+        width:100%;
     }
 
     .star {

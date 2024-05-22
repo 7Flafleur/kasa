@@ -9,7 +9,7 @@ export function Star(props) {
         <FontAwesomeIcon 
             className={`star ${props.filled ? 'filled' : ''}`} 
             icon={faStar} 
-            style={{ color: props.filled ? 'red' : 'grey' }}
+            style={{ color: props.filled ? '#ff6060' : 'grey' }}
         />
     );
 }
