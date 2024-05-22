@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Collapse from "../components/Collapse";
 import { Star } from "../components/Star";
 import Tag from "../components/Tag";
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 
 
 
@@ -15,27 +15,50 @@ export default function Property() {
 
   const { id } = useParams();
 
-  const logement = getLogement(id);
+  const [logement, setLogement] = useState(null);
 
   console.log(logement)
 
-  // gérer cote asynchrone
-
   useEffect(() => {
-    if (logement === undefined) {
-      navigate("/Property/404");
-    }
-  }, [logement, navigate]);
+    const fetchLogement = async () => {
+      try {
+        const data = await getLogement(id);
+        if(data===undefined ||null){
+          navigate("/Property/404");
+          return null;
+        }
+        setLogement(data);
+      } catch (error) {
+        console.error("Failed to fetch logement:", error);
+        navigate("/Property/404");
+      }
+    };
 
-  if (logement === undefined) {
+    fetchLogement();
+  }, [id, navigate]);
+
+  if (logement === null) {
     return null;
   }
+
+
+
+
+  // gérer cote asynchrone
+
+  // useEffect(() => {
+  //   if (logement === undefined) {
+  //     navigate("/Property/404");
+  //   }
+  // }, [logement, navigate]);
+
+  // if (logement === undefined) {
+  //   return null;
+  // }
 
   console.log(logement)
 
   const equipements = logement.equipments.map(equipement => equipement)
-
-
 
   const tags = logement.tags;
 
