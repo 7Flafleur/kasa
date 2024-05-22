@@ -12,12 +12,9 @@
 }
 
 #notFoundTitle{
-    color: #FF6060;
+    color: $red;
 text-align: center;
-font-family: Montserrat;
-font-size: 288px;
-font-style: normal;
-font-weight: 700;
+@include _404-font;
 line-height: 142.6%; /* 410.688px */
 margin:0;
 padding: 0;
@@ -25,31 +22,31 @@ padding: 0;
 
 
 #notFoundSubtitle{
-    color: #FF6060;
-font-family: Montserrat;
+    color: $red;
+@include medium-font;
 font-size: 36px;
-font-style: normal;
-font-weight: 500;
+
 line-height: 142.6%; /* 51.336px */
 margin: 0;
 }
 
 #linkhome {
     color: #000;
-font-family: Montserrat;
+@include medium-font;
 font-size: 18px;
-font-style: normal;
-font-weight: 500;
+
 line-height: 142.6%; /* 25.668px */
 text-decoration-line: underline;
 }
 
 
 
-@media (max-width: 768px) {
+@include respond-to(mobile) {
     #p404 {
-        gap: 20px;
-        padding: 20px;
+        
+        gap: 113px;
+        padding: 0 20px 20px 20px;
+        height:50vh;
     }
 
     #notFoundTitle {
