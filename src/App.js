@@ -10,12 +10,12 @@ import {Suspense, lazy } from 'react';
 
 
 
-const Apropos = lazy(() => import("./pages/A_propos"));
+const Apropos = lazy(() => import("./pages/Apropos"));
 const Home = lazy(() => import("./pages/Home"));
 
 
 
-const PageNotFound = lazy(() => import("./pages/PageNotFound"));
+const PageNotFound = lazy(() => import("./pages/Pagenotfound"));
 const Property = lazy(() => import("./pages/Property"));
 
 

@@ -20,7 +20,7 @@
 }
 
 .carouselItem {
-    
+    position: relative;
     display:none;
 width:100%;
 
@@ -57,4 +57,13 @@ padding:0;
     &.next{
         right:5px;
     }
+}
+
+.index{
+    color: #fff;
+    position: absolute;
+    left:50%;
+    bottom: 25px;
+    font-size: 18;
+    font-weight: 500;
 }

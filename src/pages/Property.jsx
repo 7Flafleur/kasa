@@ -3,7 +3,7 @@ import Carousel from "../components/Slideshow"
 import { useParams } from "react-router-dom"
 import { useNavigate } from "react-router-dom";
 import Collapse from "../components/Collapse";
-import { Star } from "../components/star";
+import { Star } from "../components/Star";
 import Tag from "../components/Tag";
 import { useEffect } from "react";
 

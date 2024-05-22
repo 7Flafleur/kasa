@@ -57,11 +57,6 @@ export default function Carousel() {
         <ul className="carousel">
 
 
-            <FontAwesomeIcon className="btn prev" icon={faChevronLeft} onClick={previousItem} />
-
-
-
-            <FontAwesomeIcon className="btn next" icon={faChevronRight} onClick={nextItem} />
 
 
             {
@@ -69,6 +64,13 @@ export default function Carousel() {
                     <li key={index}>
                         <figure className={`carouselItem ${index === activeIndex ? "active" : ""}`}>
                             <img className="picture" src={picture} alt={`${logement.title}`} />
+
+                            <FontAwesomeIcon className="btn prev" icon={faChevronLeft} onClick={previousItem} />
+
+
+
+<FontAwesomeIcon className="btn next" icon={faChevronRight} onClick={nextItem} />
+                            <span className="index">{index+1}/{pictures.length}</span>
 
                         </figure>
                     </li>
