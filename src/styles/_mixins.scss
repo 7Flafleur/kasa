@@ -43,19 +43,6 @@
 
 }
 
-// @mixin montserrat-font($uniquifier, $weight) {
-//   .montserrat-#{$uniquifier} {
-//     font-family: "Montserrat", sans-serif;
-//     font-optical-sizing: auto;
-//     font-weight: $weight;
-//     font-style: normal;
-//   }
-// }
-
-
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
-
 @mixin _404-font {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -79,6 +66,16 @@
 
 }
 
+@mixin large-font {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+
+}
+
+
+
+
 @mixin drop-shadow {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
@@ -97,6 +94,58 @@
   background: #000;
   mix-blend-mode: darken;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+@mixin descendantwidth($n1, $n2) {
+  width: math.div($n1, $n2)*100%;
+}
+
+@mixin descendantheight($n1, $n2) {
+  height: math.div($n1, $n2)*100%;
+}
+
+
+@mixin font-style($size, $weight, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin background-image($url) {
+  background-image: url($url);
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin card-background($radius: 10px, $start-color: rgba(255, 255, 255, 0.00), $end-color: rgba(0, 0, 0, 0.50)) {
+  border-radius: $radius;
+  background: linear-gradient(180deg, $start-color 0%, rgba(10, 10, 10, 0.00) 42%, rgba(4, 4, 4, 0.20) 99.99%, $end-color 100%);
+}
+
+@mixin respond-to($media) {
+    @if $media == mobile {
+        @media (max-width: 768px) { @content; }
+    } @else if $media == desktop {
+        @media (min-width: 1024px) { @content; }
+    }
+}
+
+@mixin button($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 @mixin descendantwidth($n1, $n2) {

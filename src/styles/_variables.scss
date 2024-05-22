@@ -10,6 +10,7 @@ $opacity: 45%;
 ////////////////Screen dimensions////////////
 
 $bp-mobile: "(max-width:414px)";
+$bp-desktop: "(min-width:1024px)";
 
 
 
@@ -24,6 +25,11 @@ $mobile-height-404: 879px;
 $mobile-height-apropos: 604px;
 
 /////////////////////absolute element dimensions//////////////////////////////
+/// 
+/// 
+
+$banner-height: 300px;
+
 
 $header-height-d: 68px;
 
@@ -66,3 +72,31 @@ $home-height: 72%;
 $apropos-picture-height-d: 15%;
 
 $main-content-width: math.div($body-width-d, $desktop-width)*100%;
+
+
+
+
+
+
+
+///////////// Fonts
+$font-size-large: 36px;
+$font-size-medium: 24px;
+$font-size-small: 16px;
+
+
+$font-weight-bold: 700;
+$font-weight-regular: 400;
+
+/////////////// Spacing
+$spacing-small: 10px;
+$spacing-medium: 20px;
+$spacing-large: 30px;
+
+
+//////// Border Radius
+$border-radius-small: 5px;
+$border-radius-medium: 10px;
+$border-radius-large: 25px;
+
+

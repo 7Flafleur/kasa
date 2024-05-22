@@ -9,8 +9,6 @@ import { useEffect } from "react";
 
 
 
-
-
 export default function Property() {
 
   const navigate = useNavigate();

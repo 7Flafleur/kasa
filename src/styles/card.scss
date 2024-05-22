@@ -19,7 +19,7 @@
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
       }
 
-    @media #{$bp-mobile} {
+    @include respond-to(mobile) {
         width:90%;  
         }
      
@@ -50,9 +50,7 @@ z-index: 2;
 .title{
     padding: 7%;
     color: #FFF;
-font-family: Montserrat;
-font-size: 18px;
-font-style: normal;
+@include large-font;
 font-weight: 700;
 line-height: 142.6%; /* 25.668px */
 width: math.div(300,340)*100%;
