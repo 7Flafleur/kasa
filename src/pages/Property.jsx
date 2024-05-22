@@ -43,7 +43,7 @@ export default function Property() {
 
   return (
     <div className="property">
-      <Carousel id={id} />
+      <Carousel logement={logement} id={logement.id} />
       <div className="property_infos">
         <div className="left">
           <div className="infotitle">
