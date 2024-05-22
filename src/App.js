@@ -29,7 +29,7 @@ export default function App() {
     <Routes>
          
           <Route path="about" element={<Apropos/>} />
-          <Route path="/Property/:Id" element={<Property  />} />
+          <Route path="/Property/:id" element={<Property  />} />
           <Route path="/" element={<Home/>} />
           <Route path="/Property/404" element={<PageNotFound/>}/>
           <Route path="*" element={<PageNotFound/>} />

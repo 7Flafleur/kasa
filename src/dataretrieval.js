@@ -26,12 +26,12 @@ export function getLogements() {
     return logements.map(item => item);
 }
 
-export function getLogement(Id) { //id minus
+export function getLogement(id) { //id minus
 
     if (!logements.every(item => Object.prototype.hasOwnProperty.call(item, 'id'))) {
         throw new Error('contenu indisponible');
     }
-    return logements.find((item) => item.id === Id)       //return logemt that matches ID 
+    return logements.find((item) => item.id === id)       //return logemt that matches id 
 }
 
 export function getContents() {
@@ -48,10 +48,10 @@ export function getKeywords() {
     return textesapropos.map(item => item.id);
 }
 
-export function getContent(Id) {
+export function getContent(id) {
     if (!textesapropos.every(item => Object.prototype.hasOwnProperty.call(item, 'id'))) {
         throw new Error('contenu indisponible');
     }
 
-    return textesapropos.find((item) => item.id === Id)
+    return textesapropos.find((item) => item.id === id)
 }

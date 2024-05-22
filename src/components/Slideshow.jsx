@@ -13,13 +13,13 @@ export default function Carousel() {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    const { Id } = useParams();
+    const { id } = useParams();
 
 
     useEffect(() => {
         const fetchLogement = async () => {                //utiliser variable dans property
             try {
-                const data = await getLogement(Id);
+                const data = await getLogement(id);
                 setLogement(data);
 
             } catch (err) {
@@ -30,7 +30,7 @@ export default function Carousel() {
         };
 
         fetchLogement();
-    }, [Id]);
+    }, [id]);
 
     if (isLoading) {
         return <div>Loading...</div>;
@@ -69,8 +69,8 @@ export default function Carousel() {
 
 
 
-<FontAwesomeIcon className="btn next" icon={faChevronRight} onClick={nextItem} />
-                            <span className="index">{index+1}/{pictures.length}</span>
+                            <FontAwesomeIcon className="btn next" icon={faChevronRight} onClick={nextItem} />
+                            <span className="index">{index + 1}/{pictures.length}</span>
 
                         </figure>
                     </li>

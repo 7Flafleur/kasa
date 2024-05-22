@@ -13,9 +13,9 @@ export default function Property() {
 
   const navigate = useNavigate();
 
-  const { Id } = useParams();
+  const { id } = useParams();
 
-  const logement = getLogement(Id);
+  const logement = getLogement(id);
 
   console.log(logement)
 
@@ -43,7 +43,7 @@ export default function Property() {
 
   return (
     <div className="property">
-      <Carousel id={Id} />
+      <Carousel id={id} />
       <div className="property_infos">
         <div className="left">
           <div className="infotitle">
