@@ -10,15 +10,13 @@ import {Suspense, lazy } from 'react';
 
 
 
-const Apropos = lazy(() => import("./components/A_propos"));
-const Home = lazy(() => import("./components/Home"));
+const Apropos = lazy(() => import("./pages/A_propos"));
+const Home = lazy(() => import("./pages/Home"));
 
-// const Home = lazy(() => new Promise(resolve => 
-//   setTimeout(resolve, 2000)
-// ).then(() => import("./components/Home")));
 
-const PageNotFound = lazy(() => import("./components/PageNotFound"));
-const Property = lazy(() => import("./components/Property"));
+
+const PageNotFound = lazy(() => import("./pages/PageNotFound"));
+const Property = lazy(() => import("./pages/Property"));
 
 
 export default function App() {

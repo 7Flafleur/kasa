@@ -3,57 +3,57 @@ $grey: #F6F6F6;
 $black: #000;
 
 
-$opacity: 45%; 
+$opacity: 45%;
 
 
 
 ////////////////Screen dimensions////////////
 
-$bp-mobile:"(max-width:414px)";
+$bp-mobile: "(max-width:414px)";
 
 
 
 $desktop-width: 1440px;
 $desktop-height: 1517px;
 
-$mobile-width:375px;
+$mobile-width: 375px;
 
-$mobile-height-c:1248px;
-$mobile-height-card:823px;
-$mobile-height-404:879px;
-$mobile-height-apropos:604px;
+$mobile-height-c: 1248px;
+$mobile-height-card: 823px;
+$mobile-height-404: 879px;
+$mobile-height-apropos: 604px;
 
 /////////////////////absolute element dimensions//////////////////////////////
 
-$header-height-d:68px;
+$header-height-d: 68px;
 
-$header-width-m:335px;
-$header-height-m:46.88px;
+$header-width-m: 335px;
+$header-height-m: 46.88px;
 
-$logo-width-d:210px;
-$logo-height-d:68px;
+$logo-width-d: 210px;
+$logo-height-d: 68px;
 
-$logo-width-m:145px;
-$logo-height-m:46px;
+$logo-width-m: 145px;
+$logo-height-m: 46px;
 
-$nav-width-d:309px;
-$nav-height-d:34px;
+$nav-width-d: 309px;
+$nav-height-d: 34px;
 
-$nav-width-m:190px;
-$nav-width-m:17px;
+$nav-width-m: 190px;
+$nav-width-m: 17px;
 
-$footer-height:14%;
+$footer-height: 14%;
 
-$body-width-d:1240px;
-$body-width-m:335px;
+$body-width-d: 1240px;
+$body-width-m: 335px;
 
-$carousel-height-d:145px;
-$carousel-height-m:255px;
+$carousel-height-d: 145px;
+$carousel-height-m: 255px;
 
 
-$apropos-picture-height-m:111px;
-$dropdown-width-d:1023px;
-$dropdown-width-m:295px;
+$apropos-picture-height-m: 111px;
+$dropdown-width-d: 1023px;
+$dropdown-width-m: 295px;
 
 
 
@@ -63,8 +63,6 @@ $dropdown-width-m:295px;
 
 $home-height: 72%;
 
-$apropos-picture-height-d:15%;
+$apropos-picture-height-d: 15%;
 
-$main-content-width:math.div($body-width-d,$desktop-width)*100%;
-
-
+$main-content-width: math.div($body-width-d, $desktop-width)*100%;

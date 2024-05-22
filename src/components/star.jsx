@@ -6,16 +6,16 @@ import PropTypes from 'prop-types';
 
 export function Star(props) {
     return (
-        <FontAwesomeIcon 
-            className={`star ${props.filled ? 'filled' : ''}`} 
-            icon={faStar} 
+        <FontAwesomeIcon
+            className={`star ${props.filled ? 'filled' : ''}`}
+            icon={faStar}
             style={{ color: props.filled ? '#ff6060' : 'grey' }}
         />
     );
 }
 
 
-Star.propTypes ={
+Star.propTypes = {
     filled: PropTypes.string,
 
 };

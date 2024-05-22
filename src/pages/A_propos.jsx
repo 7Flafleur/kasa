@@ -1,7 +1,7 @@
 import { useState,useEffect } from "react"
-import Banner from "./Banner"
+import Banner from "../components/Banner"
 import img2 from "../assets/im2.jpg"
-import Collapse from "./Collapse"
+import Collapse from "../components/Collapse"
 import { getKeywords, getContent } from '../dataretrieval'
 
 

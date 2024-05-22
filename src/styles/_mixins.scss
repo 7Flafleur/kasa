@@ -1,26 +1,26 @@
 @use "sass:math";
 
 @mixin card-background {
-    border-radius: 10px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(10, 10, 10, 0.00) 42%, rgba(4, 4, 4, 0.20) 99.99%, rgba(0, 0, 0, 0.50) 100%);
-  }
-
-  @mixin apropos_background {
-    border-radius: 25px;
-opacity: 0.3;
-background: #000;
-mix-blend-mode: darken;
-width:100%;
-height:100%;
-  }
-  
-@mixin card-size-d {
-    width: 340px;
-    height: 340px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(10, 10, 10, 0.00) 42%, rgba(4, 4, 4, 0.20) 99.99%, rgba(0, 0, 0, 0.50) 100%);
 }
 
-@mixin chezvous{
-  
+@mixin apropos_background {
+  border-radius: 25px;
+  opacity: 0.3;
+  background: #000;
+  mix-blend-mode: darken;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin card-size-d {
+  width: 340px;
+  height: 340px;
+}
+
+@mixin chezvous {
+
   color: #FFF;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   -webkit-text-stroke-width: 1;
@@ -29,19 +29,20 @@ height:100%;
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
-  line-height: 142.6%; 
+  line-height: 142.6%;
 }
 
-@mixin main{
+@mixin main {
   // border: solid pink 2px;
   display: flex;
   flex-direction: column;
-  align-items:  center;
-  height:100%;
-  width:$main-content-width;
+  align-items: center;
+  height: 100%;
+  width: $main-content-width;
 
-  
+
 }
+
 // @mixin montserrat-font($uniquifier, $weight) {
 //   .montserrat-#{$uniquifier} {
 //     font-family: "Montserrat", sans-serif;
@@ -63,45 +64,45 @@ height:100%;
 
 }
 
-@mixin regular-font{
+@mixin regular-font {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
-  
+
 }
 
 
-@mixin medium-font{
+@mixin medium-font {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
-  
+
 }
 
 @mixin drop-shadow {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-@mixin picture-background-accueil-d{
+@mixin picture-background-accueil-d {
   border-radius: 25px;
-opacity: 0.6;
-background: #000;
-mix-blend-mode: darken;
+  opacity: 0.6;
+  background: #000;
+  mix-blend-mode: darken;
 }
 
-@mixin picture-background-accueil-m{
+@mixin picture-background-accueil-m {
   border-radius: 10px;
-border: 1px solid #000;
-opacity: 0.6;
-background: #000;
-mix-blend-mode: darken;
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border: 1px solid #000;
+  opacity: 0.6;
+  background: #000;
+  mix-blend-mode: darken;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-@mixin descendantwidth($n1,$n2){
-  width: math.div($n1,$n2)*100%;
+@mixin descendantwidth($n1, $n2) {
+  width: math.div($n1, $n2)*100%;
 }
 
-@mixin descendantheight($n1,$n2){
-  height: math.div($n1,$n2)*100%;
+@mixin descendantheight($n1, $n2) {
+  height: math.div($n1, $n2)*100%;
 }

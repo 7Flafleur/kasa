@@ -6,43 +6,45 @@
 @import 'mixins';
 
 
-.property{
+.property {
     @include main;
     border: none;
 }
 
-.property_infos{
-    
-    display:flex;
+.property_infos {
+
+    display: flex;
     justify-content: space-between;
-    width:100%;
-    padding:10px 0 10px 0;
+    width: 100%;
+    padding: 10px 0 10px 0;
 }
 
-h1{
+h1 {
     color: #FF6060;
-font-family: Montserrat;
-font-size: 36px;
-font-style: normal;
-font-weight: 500;
-line-height: 142.6%; /* 51.336px */
+    font-family: Montserrat;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%;
+    /* 51.336px */
 }
 
-h2{
+h2 {
     color: #000;
-font-family: Montserrat;
-font-size: 18px;
-font-style: normal;
-font-weight: 500;
-line-height: 142.6%; /* 25.668px */
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%;
+    /* 25.668px */
 }
 
-.left{
-//    border: blue dashed 2px;
+.left {
+    //    border: blue dashed 2px;
     width: 50%;
 }
 
-.right{
+.right {
     // border: blue dashed 2px;
     width: 50%;
     display: flex;
@@ -50,60 +52,63 @@ line-height: 142.6%; /* 25.668px */
     justify-content: space-between;
     padding-left: 2.5em;
     align-items: flex-end;
-    
-    flex:1;
-    
+
+    flex: 1;
+
 }
 
-.details{
-    
+.details {
+
     display: flex;
-    gap:76px;
+    gap: 76px;
     width: 100%;
 }
 
-.infotitle{
-    color:$red;
+.infotitle {
+    color: $red;
 }
 
-.host{
-    
+.host {
+
     color: $red;
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-end;
     gap: 8px;
     align-items: flex-start;
-    img{
+
+    img {
         margin-top: 10px;
         border-radius: 50%;
         width: 64px;
         height: 64px;
     }
-   h3{
-    
-    display: inline;
-    color: #FF6060;
-text-align: right;
-font-family: Montserrat;
-font-size: 18px;
-font-style: normal;
-font-weight: 500;
-line-height: 142.6%; /* 25.668px */
-   
-} 
+
+    h3 {
+
+        display: inline;
+        color: #FF6060;
+        text-align: right;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 142.6%;
+        /* 25.668px */
+
+    }
 }
 
-.rate{
-    
-    
+.rate {
+
+
     display: inline;
-    width:188px;
+    width: 188px;
 }
 
 
 
-.star{
-   
+.star {
+
     display: inline;
     width: 36px;
     height: 36px;
@@ -115,25 +120,27 @@ line-height: 142.6%; /* 25.668px */
 @media (max-width: 768px) {
     .property_infos {
         flex-direction: column;
-        width:100%;
+        width: 100%;
     }
 
-    .left, .right {
+    .left,
+    .right {
         width: 100%;
         padding-left: 0;
     }
 
 
     .details {
-        
+
         flex-direction: column;
         gap: 20px;
         color: #FFF;
-font-family: Montserrat;
-font-size: 13px;
-font-style: normal;
-font-weight: 700;
-line-height: 142.6%; /* 18.538px */
+        font-family: Montserrat;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 142.6%;
+        /* 18.538px */
     }
 
     .host {
@@ -147,20 +154,21 @@ line-height: 142.6%; /* 18.538px */
         }
 
         h3 {
-            margin-top: 1.5em;;
+            margin-top: 1.5em;
+            ;
             font-size: 16px;
         }
     }
 
-    .rate{
+    .rate {
         margin-top: -2em;
         margin-bottom: 1em;
-        width:100%;
+        width: 100%;
     }
 
     .star {
         width: 24px;
         height: 24px;
-        margin-top:-20px;
+        margin-top: -20px;
     }
 }

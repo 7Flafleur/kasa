@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom"
-import Banner from "./Banner"
+import Banner from "../components/Banner"
 import img1 from "../assets/IMG1.png"
 import { getLogements } from "../dataretrieval"
-import { FaCarCrash } from 'react-icons/fa';
+
 
 
 
