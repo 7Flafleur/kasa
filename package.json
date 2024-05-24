@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://7Flafleur.github.io/kasa",
-
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
@@ -22,7 +21,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "eject": "react-scripts eject"
+    
   },
   "eslintConfig": {
     "extends": [
@@ -45,9 +48,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "eslint": "^8.57.0",
-    "eslint-plugin-react": "^7.34.1"
+    "eslint-plugin-react": "^7.34.1",
+    "gh-pages": "^6.1.1"
   }
-
-
-
 }
