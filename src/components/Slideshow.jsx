@@ -46,7 +46,7 @@ export default function Carousel() {
     const pictures = logement.pictures;
 
     function previousItem() {
-        setActiveIndex(prevActiveIndex => prevActiveIndex - 1 < 0 ? pictures.length - 1 : prevActiveIndex - 1);
+        setActiveIndex(prevActiveIndex => (prevActiveIndex - 1 + pictures.length) % pictures.length);
     }
 
     function nextItem() {
