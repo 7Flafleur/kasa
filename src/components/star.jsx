@@ -16,6 +16,6 @@ export function Star(props) {
 
 
 Star.propTypes = {
-    filled: PropTypes.string,
+    filled: PropTypes.bool,
 
 };

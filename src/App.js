@@ -15,7 +15,7 @@ const Home = lazy(() => import("./pages/Home"));
 
 
 
-const PageNotFound = lazy(() => import("./pages/Pagenotfound"));
+const PageNotFound = lazy(() => import("./pages/PageNotFound"));
 const Property = lazy(() => import("./pages/Property"));
 
 
@@ -29,7 +29,7 @@ export default function App() {
     <Routes>
          
           <Route path="about" element={<Apropos/>} />
-          <Route path="/Property/:Id" element={<Property  />} />
+          <Route path="/Property/:id" element={<Property  />} />
           <Route path="/" element={<Home/>} />
           <Route path="/Property/404" element={<PageNotFound/>}/>
           <Route path="*" element={<PageNotFound/>} />

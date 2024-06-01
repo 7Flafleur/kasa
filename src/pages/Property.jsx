@@ -15,11 +15,12 @@ export default function Property() {
 
   const navigate = useNavigate();
 
-  const { Id } = useParams();
+  const { id } = useParams();
 
-  const logement = getLogement(Id);
 
-  console.log(logement)
+
+  const logement = getLogement(id);
+
 
   // gérer cote asynchrone
 
@@ -33,7 +34,7 @@ export default function Property() {
     return null;
   }
 
-  console.log(logement)
+
 
   const equipements = logement.equipments.map(equipement => equipement)
 
@@ -45,7 +46,7 @@ export default function Property() {
 
   return (
     <div className="property">
-      <Carousel id={Id} />
+      <Carousel logement={logement} />
       <div className="property_infos">
         <div className="left">
           <div className="infotitle">

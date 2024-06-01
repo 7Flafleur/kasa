@@ -3,42 +3,16 @@ import { useState, useEffect } from "react";
 import { getLogement } from "../dataretrieval";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import PropTypes from 'prop-types';
 
 
 
-export default function Carousel() {
+export default function Carousel(props) {
 
     const [activeIndex, setActiveIndex] = useState(0);
-    const [logement, setLogement] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState(null);
+   
 
-    const { Id } = useParams();
-
-
-    useEffect(() => {
-        const fetchLogement = async () => {                //utiliser variable dans property
-            try {
-                const data = await getLogement(Id);
-                setLogement(data);
-
-            } catch (err) {
-                setError(err.message);
-            } finally {
-                setIsLoading(false);
-            }
-        };
-
-        fetchLogement();
-    }, [Id]);
-
-    if (isLoading) {
-        return <div>Loading...</div>;
-    }
-
-    if (error) {
-        return <div className="carousel">Erreur:{error}</div>;
-    }
+    const logement =props.logement
 
 
 
@@ -81,3 +55,10 @@ export default function Carousel() {
 }
 
 
+Carousel.propTypes = {
+    logement: PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
+      // Include other properties of logement here...
+    }).isRequired,
+  };
