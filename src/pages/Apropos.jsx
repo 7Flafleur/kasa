@@ -1,3 +1,4 @@
+
 import { useState,useEffect } from "react"
 import Banner from "../components/Banner"
 import img2 from "../assets/im2.jpg"
@@ -49,7 +50,7 @@ export default function Apropos () {
 
     return(
         <div className="apropos">
-            <Banner  img={img2} chezvouz="" />
+            <Banner  img={img2} />
             <ul className="Collapse_container"  >
                 {keywords.map(keyword => (
                     <li className="Collapse_component" key={keyword}>

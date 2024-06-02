@@ -30,12 +30,9 @@ setLogements(data);
         fetchLogements();
     },[]
 
+
     )
     
-
-
-        
-
 
     if (isLoading) {
         return <div>Loading...</div>;
@@ -45,12 +42,10 @@ setLogements(data);
         return <div >Logements indisponibles</div>;
     }
 
-   
-
     
     return(
         <div className="home">
-           <Banner img={img1} chezvous="Chez Vous, partout et ailleurs">
+           <Banner img={img1} >
            <p className="chezvous">Chez Vous, partout et ailleurs</p>
             </Banner>
     
