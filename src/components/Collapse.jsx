@@ -15,7 +15,7 @@ export default function Collapse(props){
 
     function handleClick() {
         setIsOpen(!isOpen);
-        console.log("rotated")
+      
     }
 
     return(
