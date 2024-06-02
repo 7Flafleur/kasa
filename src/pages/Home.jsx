@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import Banner from "../components/Banner"
 import img1 from "../assets/IMG1.png"
 import { getLogements } from "../dataretrieval"
+import Gallery from '../components/Gallery';
 
 
 
@@ -55,18 +56,7 @@ setLogements(data);
             </Banner>
     
 
-  <ul className="gallery">
-{
-    logements.map(logement =>(
-        <li className="card" key={logement.id}>
-            <Link to={`/property/${logement.id}`}><div className="card_filter"><span className="title">{logement.title}</span></div>
-            <img src={logement.cover} alt={logement.title} />
-                </Link>
-        </li>
-    ))
-}
-
-  </ul>
+<Gallery logements={logements}/>
         </div>
     )
 }
