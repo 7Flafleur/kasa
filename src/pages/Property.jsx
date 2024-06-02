@@ -22,10 +22,11 @@ export default function Property(props) {
   // gérer cote asynchrone
 
   useEffect(() => {
+    
     if (logement === undefined) {
       navigate("/Property/404");
     }
-  }, [logement, navigate]);
+  }, [logement]);
 
   if (logement === undefined) {
     return null;

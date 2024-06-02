@@ -10,9 +10,9 @@ import PropTypes from 'prop-types';
 export default function Carousel(props) {
 
     const [activeIndex, setActiveIndex] = useState(0);
-   
 
-    const logement =props.logement
+
+    const logement = props.logement
 
 
 
@@ -43,8 +43,8 @@ export default function Carousel(props) {
 
 
 
-<FontAwesomeIcon className="btn next" icon={faChevronRight} onClick={nextItem} />
-                            <span className="index">{index+1}/{pictures.length}</span>
+                            <FontAwesomeIcon className="btn next" icon={faChevronRight} onClick={nextItem} />
+                            <span className="index">{index + 1}/{pictures.length}</span>
 
                         </figure>
                     </li>
@@ -57,8 +57,8 @@ export default function Carousel(props) {
 
 Carousel.propTypes = {
     logement: PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
-      // Include other properties of logement here...
+        title: PropTypes.string.isRequired,
+        pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
+        // Include other properties of logement here...
     }).isRequired,
-  };
+};

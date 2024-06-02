@@ -15,7 +15,7 @@ export default function PropertyFetcher(){
 
 
     useEffect(() => {
-        const fetchlogement = async () => {
+        const fetchlogement = () => {
 
             try{
                 const data = getLogement(id);
