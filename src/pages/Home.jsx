@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Link } from "react-router-dom"
 import Banner from "../components/Banner"
 import img1 from "../assets/IMG1.png"
 import { getLogements } from "../dataretrieval"
@@ -16,7 +15,7 @@ export default function Home () {
     useEffect(() => {
         const fetchLogements = async () => {
             try {
-const data= await getLogements();
+const data=  getLogements();
 setLogements(data);
 
 

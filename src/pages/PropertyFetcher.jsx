@@ -1,4 +1,4 @@
-import Property from './Property';
+import Property from '../components/Property';
 import { useParams } from "react-router-dom";
 import { getLogement } from "../dataretrieval";
 import { useState,useEffect } from "react";

@@ -1,10 +1,10 @@
-import { getLogement } from "../dataretrieval";
-import Carousel from "../components/Slideshow"
-import { useParams } from "react-router-dom";
+
+import Carousel from "./Slideshow"
+
 import { useNavigate } from "react-router-dom";
-import Collapse from "../components/Collapse";
-import { Star } from "../components/Star";
-import Tag from "../components/Tag";
+import Collapse from "./Collapse";
+import { Star } from "./Star";
+import Tag from "./Tag";
 import { useEffect } from "react";
 import PropTypes from 'prop-types';
  
@@ -93,7 +93,7 @@ Property.propTypes = {
     equipments:PropTypes.array,
     host:PropTypes.object,
     location: PropTypes.string,
-    rating: PropTypes,
+    rating: PropTypes.string,
     tags:PropTypes.array,
     title: PropTypes.string,
     
