@@ -1,25 +1,22 @@
 import { getLogement } from "../dataretrieval";
 import Carousel from "../components/Slideshow"
-import { useParams } from "react-router-dom"
+import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Collapse from "../components/Collapse";
 import { Star } from "../components/Star";
 import Tag from "../components/Tag";
 import { useEffect } from "react";
+import PropTypes from 'prop-types';
+ 
 
 
 
 
-
-export default function Property() {
+export default function Property(props) {
 
   const navigate = useNavigate();
 
-  const { id } = useParams();
-
-
-
-  const logement = getLogement(id);
+  const logement = props.logement;
 
 
   // gérer cote asynchrone
@@ -86,4 +83,18 @@ export default function Property() {
 
     </div>
   )
+}
+
+Property.propTypes = {
+  logement: PropTypes.shape({
+    id: PropTypes.string,
+    description:PropTypes.string,
+    equipments:PropTypes.array,
+    host:PropTypes.object,
+    location: PropTypes.string,
+    rating: PropTypes,
+    tags:PropTypes.array,
+    title: PropTypes.string,
+    
+  }).isRequired,
 }

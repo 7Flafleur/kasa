@@ -16,7 +16,7 @@ const Home = lazy(() => import("./pages/Home"));
 
 
 const PageNotFound = lazy(() => import("./pages/PageNotFound"));
-const Property = lazy(() => import("./pages/Property"));
+const PropertyFetcher = lazy(() => import("./pages/PropertyFetcher"));
 
 
 export default function App() {
@@ -29,7 +29,7 @@ export default function App() {
     <Routes>
          
           <Route path="about" element={<Apropos/>} />
-          <Route path="/Property/:id" element={<Property  />} />
+          <Route path="/Property/:id" element={<PropertyFetcher  />} />
           <Route path="/" element={<Home/>} />
           <Route path="/Property/404" element={<PageNotFound/>}/>
           <Route path="*" element={<PageNotFound/>} />
